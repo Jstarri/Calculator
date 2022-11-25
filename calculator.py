@@ -20,6 +20,12 @@ def square_root(x):
 
 def cube_root(x):
   return x ** (1./3)
+
+def nat_log(x):
+  return math.log(x)
+
+def base_log(x, y):
+  return math.log(x, y)
   
 print("Select operation.")
 print("1: Add")
@@ -29,12 +35,14 @@ print("4: Divide")
 print("5: Exponent")
 print("6: Square Root")
 print("7: Cube Root")
+print("8: Natural Log")
+print('9: Base Log')
 
 while True:
-  choice = input("Enter choice(1/2/3/4/5/6/7): ")
+  choice = input("Enter choice(1/2/3/4/5/6/7/8/9): ")
 
   #Part for two-number calculations
-  if choice in ('1', '2', '3', '4', '5'):
+  if choice in ('1', '2', '3', '4', '5', '9'):
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
   
@@ -52,16 +60,23 @@ while True:
     
   elif choice == '5':
       print(num1, "to the power of", num2, "=", exponent(num1, num2))
+  
+  elif choice == '9':
+      print("The logarithm base", num2, "of", num1, "=", base_log(num1, num2))
 
   #Part for one-number calculations
-  elif choice in ('6', '7'):
+  elif choice in ('6', '7', '8'):
     num3 = float(input("Enter number: "))
 
-    if choice == '6':
-      print("The square root of", num3, "is", square_root(num3))
+  if choice == '6':
+    print("The square root of", num3, "is", square_root(num3))
 
-    elif choice == '7':
-      print("The cube root of", num3, "is", cube_root(num3))
+  elif choice == '7':
+    print("The cube root of", num3, "is", cube_root(num3))
+  
+  elif choice == '8':
+    print("The natural logarithm of", num3, "=", nat_log(num3))
+
     
   next_calculation = input("Let's do another calculation? (yes/no): ")
   if next_calculation == 'yes':
