@@ -38,8 +38,9 @@ def triangle_area(x, y):
 
 def circle_area(x):
   return 3.14(x **2)
-  
-print("Select operation.")
+
+print("Welcome to AJ's Calculator")  
+print("Select your operation.")
 print("1: Add")
 print("2: Subtract")
 print("3: Multiply")
