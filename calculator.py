@@ -39,6 +39,9 @@ def triangle_area(x, y):
 def circle_area(x):
   return 3.14(x **2)
 
+def slope_intercept(x, y, z):
+  return (x * y) + z
+
 print("Welcome to AJ's Calculator")  
 print("Select your operation.")
 print("1: Add")
@@ -54,14 +57,24 @@ print("10: Area of Square")
 print("11: Area of Rectangle")
 print("12: Area of Triangle")
 print("13: Area of Circle")
+print("14: Slope-Intercept Formula")
 
 while True:
-  choice = input("Enter choice(1/2/3/4/5/6/7/8/9/10/11/12/13): ")
+  choice = input("Enter choice(1/2/3/4/5/6/7/8/9/10/11/12/13/14): ")
+
+  #Part for three-number calculations
+  if choice in ('14'):
+    num4 = float(input("Enter your first number: "))
+    num5 = float(input("Enter your second number: "))
+    num6 = float(input("Enter your third number: ")) 
+  
+  if choice == '14':
+    print("The answer to y = (", num4, "*", num5, ") +", num6, "=", slope_intercept(num4, num5, num6))
 
   #Part for two-number calculations
   if choice in ('1', '2', '3', '4', '5', '9', '11', '12'):
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+    num1 = float(input("Enter your first number: "))
+    num2 = float(input("Enter your second number: "))
   
   if choice == '1':
     print(num1, "+", num2, "=", add(num1, num2))
@@ -89,7 +102,7 @@ while True:
 
   #Part for one-number calculations
   elif choice in ('6', '7', '8', '10', '13'):
-    num3 = float(input("Enter number: "))
+    num3 = float(input("Enter your number: "))
 
   if choice == '6':
     print("The square root of", num3, "is", square_root(num3))
