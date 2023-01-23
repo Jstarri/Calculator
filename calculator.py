@@ -43,84 +43,117 @@ def bill_split(x, y):
   return x / y
 
 def bill_tip(x, y):
-  return x * y
+  return x * (y * 0.01)
   
-print("Select operation.")
-print("A: Add")
-print("B: Subtract")
-print("C: Multiply")
-print("D: Divide")
-print("E: Exponent")
-print("F: Square Root")
-print("G: Cube Root")
-print("H: Natural Log")
-print("I: Base Log")
-print("J: Area of Square")
-print("K: Area of Rectangle")
-print("L: Area of Triangle")
-print("M: Area of Circle")
-print("N: Bill Splitting with Tip")
-
+print("Welcome to AJ's Calculator")
+print("Choose your Calculator style: ")
+style_choice = input("Enter choice: A-Basic Calculations; B-Exponents, Roots & Logs; C-Areas of Shapes; D-Bill Calculator: ")
 while True:
-  choice = input("Enter choice(A/B/C/D/E/F/G/H/I/J/K/L/M/N): ")
-  #Part for three-number calculatons
-  if choice in ('N'):
-    num4 = float(input("How many people: "))
-    num5 = float(input("How much is the bill: "))
-    num6 = float(input("How much are you tipping: "))
+  if style_choice == 'A':
+    print("Select operation.")
+    print("A: Add")
+    print("B: Subtract")
+    print("C: Multiply")
+    print("D: Divide")
 
-  if choice == 'N':
-    print("If you go to a restaurant with", num4 - 1, "other people and the bill is worth", num5, "dollars, then each person will pay", bill_split(num5, num4), "dollars, and the tip will be worth", bill_tip(num5, num6), "dollars.")
+    basic_choice = input("Enter choice(A/B/C/D): ")
 
-  #Part for two-number calculations
-  if choice in ('A', 'B', 'C', 'D', 'E', 'I', 'K', 'L'):
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
-  
-  if choice == 'A':
-    print(num1, "+", num2, "=", add(num1, num2))
+    if basic_choice == 'A':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(num1, "+", num2, "=", add(num1, num2))
       
-  elif choice == 'B':
-    print(num1, "-", num2, "=", subtract(num1, num2))
+    elif basic_choice == 'B':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(num1, "-", num2, "=", subtract(num1, num2))
       
-  elif choice == 'C':
-    print(num1, "*", num2, "=", multiply(num1, num2))
+    elif basic_choice == 'C':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(num1, "*", num2, "=", multiply(num1, num2))
       
-  elif choice == 'D':
-    print(num1, "/", num2, "=", divide(num1, num2))
+    elif basic_choice == 'D':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(num1, "/", num2, "=", divide(num1, num2))
+
+  if style_choice == 'B':
+    print("Select operation.")
+    print("A: Exponent")
+    print("B: Square Root")
+    print("C: Cube Root")
+    print("D: Natural Log")
+    print("E: Base Log")
+
+    basic_choice = input("Enter choice(A/B/C/D): ")
+
+    if basic_choice == 'A':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print(num1, "to the power of", num2, "=", exponent(num1, num2))
+        
+    elif basic_choice == 'B':
+      num3 = float(input("Enter number: "))
+      print("The square root of", num3, "is", square_root(num3))
+        
+    elif basic_choice == 'C':
+      num3 = float(input("Enter number: "))
+      print("The cube root of", num3, "is", cube_root(num3))
+        
+    elif basic_choice == 'D':
+      num3 = float(input("Enter number: "))
+      print("The natural logarithm of", num3, "=", nat_log(num3))
     
-  elif choice == 'E':
-    print(num1, "to the power of", num2, "=", exponent(num1, num2))
-  
-  elif choice == 'I':
-    print("The logarithm base", num2, "of", num1, "=", base_log(num1, num2))
-  
-  elif choice == 'K':
-    print("The area of a rectangle with a length of", num1, "and a width of", num2, "=", rectangle_area(num1, num2))
-  
-  elif choice == 'L':
-    print("The area of a triangle with a base length of", num1, "and a height of", num2, "=", triangle_area(num1, num2))
+    elif basic_choice == 'E':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print("The logarithm base", num2, "of", num1, "=", base_log(num1, num2))
 
-  #Part for one-number calculations
-  elif choice in ('F', 'G', 'H', 'J', 'M'):
-    num3 = float(input("Enter number: "))
+  if style_choice == 'C':
+    print("Select operation.")
+    print("A: Area of Square")
+    print("B: Area of Rectangle")
+    print("C: Area of Triangle")
+    print("D: Area of Circle")
 
-  if choice == 'F':
-    print("The square root of", num3, "is", square_root(num3))
+    basic_choice = input("Enter choice(A/B/C/D): ")
 
-  elif choice == 'G':
-    print("The cube root of", num3, "is", cube_root(num3))
-  
-  elif choice == 'H':
-    print("The natural logarithm of", num3, "=", nat_log(num3))
-  
-  elif choice == 'J':
-    print("The area of a square with a length of", num3, "and a width of", num3, "=", square_area(num3))
-  
-  elif choice == 'M':
-    print("The area of a circle with a radius of", num3, "=", circle_area(num3))
+    if basic_choice == 'A':
+      num3 = float(input("Enter number: "))
+      print("The area of a square with a length of", num3, "and a width of", num3, "=", square_area(num3))
+      
+    elif basic_choice == 'B':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print("The area of a rectangle with a length of", num1, "and a width of", num2, "=", rectangle_area(num1, num2))
+        
+    elif basic_choice == 'C':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print("The area of a triangle with a base length of", num1, "and a height of", num2, "=", triangle_area(num1, num2))
+        
+    elif basic_choice == 'D':
+      num3 = float(input("Enter number: "))
+      print("The area of a circle with a radius of", num3, "=", circle_area(num3))
 
-    
+  if style_choice == 'D':
+    print("Select operation.")
+    print("A: Splitting the Bill")
+    print("B: Tipping by Percentage")
+
+    basic_choice = input("Enter choice(A/B): ")
+
+    if basic_choice == 'A':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print("If you go to a restaurant with", num1 - 1, "other people and the bill is worth", num2, "dollars, then each person will pay", bill_split(num2, num1), "dollars")
+        
+    elif basic_choice == 'B':
+      num1 = float(input("Enter first number: "))
+      num2 = float(input("Enter second number: "))
+      print("If you go to a restaurant and the bill is worth", num1, "dollars, and you want to tip,", num2, "%, then the tip will be worth", bill_tip(num1, num2), "dollars")
+
   next_calculation = input("Let's do another calculation? (yes/no): ")
   if next_calculation == 'yes':
     continue
