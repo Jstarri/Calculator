@@ -47,8 +47,8 @@ def bill_tip(x, y):
   
 print("Welcome to AJ's Calculator")
 print("Choose your Calculator style: ")
-style_choice = input("Enter choice: A-Basic Calculations; B-Exponents, Roots & Logs; C-Areas of Shapes; D-Bill Calculator: ")
 while True:
+  style_choice = input("Enter choice: A-Basic Calculations; B-Exponents, Roots & Logs; C-Areas of Shapes; D-Bill Calculator: ")
   if style_choice == 'A':
     print("Select operation.")
     print("A: Add")
@@ -160,6 +160,3 @@ while True:
   if next_calculation == 'no':
     print("Goodbye!")
     break
-      
-else:
-  print("Invalid Input")
