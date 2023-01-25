@@ -46,9 +46,9 @@ def bill_tip(x, y):
   return x * (y * 0.01)
   
 print("Welcome to AJ's Calculator")
-print("Choose your Calculator style: ")
+print("Choose your Calculator Style: ")
 while True:
-  style_choice = input("Enter choice: A-Basic Calculations; B-Exponents, Roots & Logs; C-Areas of Shapes; D-Bill Calculator: ")
+  style_choice = input("Enter choice: A - Basic Calculations; B - Exponents, Roots & Logs; C - Areas of Shapes; D - Bill Calculator: ")
   if style_choice == 'A':
     print("Select operation.")
     print("A: Add")
@@ -153,6 +153,10 @@ while True:
       num1 = float(input("Enter first number: "))
       num2 = float(input("Enter second number: "))
       print("If you go to a restaurant and the bill is worth", num1, "dollars, and you want to tip,", num2, "%, then the tip will be worth", bill_tip(num1, num2), "dollars")
+
+  if style_choice != 'A' 'B' 'C' 'D':
+    print("Invalid Input")
+    continue
 
   next_calculation = input("Let's do another calculation? (yes/no): ")
   if next_calculation == 'yes':
