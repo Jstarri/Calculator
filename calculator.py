@@ -78,8 +78,7 @@ while True:
     elif basic_choice == 'B':
       num1 = float(input("Enter first number: "))
       num2 = float(input("Enter second number: "))
-      print(num1, "-", num2, "=", subtract(num1, num2))num2 = float(input("Enter height: "))
-      num3 = float(input("Enter width: "))
+      print(num1, "-", num2, "=", subtract(num1, num2))
       
     elif basic_choice == 'C':
       num1 = float(input("Enter first number: "))
@@ -138,7 +137,7 @@ while True:
 
     if basic_choice == 'A':
       num1 = float(input("Enter side length: "))
-      print("The area of a square with a length of", num3, "inches, and a height of", num3, "inches =", square_area(num3))
+      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1))
       
     elif basic_choice == 'B':
       num1 = float(input("Enter length: "))
