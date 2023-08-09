@@ -78,8 +78,7 @@ while True:
     elif basic_choice == 'B':
       num1 = float(input("Enter first number: "))
       num2 = float(input("Enter second number: "))
-      print(num1, "-", num2, "=", subtract(num1, num2))num2 = float(input("Enter height: "))
-      num3 = float(input("Enter width: "))
+      print(num1, "-", num2, "=", subtract(num1, num2))
       
     elif basic_choice == 'C':
       num1 = float(input("Enter first number: "))
@@ -138,7 +137,7 @@ while True:
 
     if basic_choice == 'A':
       num1 = float(input("Enter side length: "))
-      print("The area of a square with a length of", num3, "inches, and a height of", num3, "inches =", square_area(num3))
+      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1))
       
     elif basic_choice == 'B':
       num1 = float(input("Enter length: "))
@@ -182,13 +181,13 @@ while True:
     basic_choice = input("Enter choice(A/B): ")
 
     if basic_choice == 'A':
-      num1 = float(input("Enter first number: "))
-      num2 = float(input("Enter second number: "))
+      num1 = float(input("Enter the number of people: "))
+      num2 = float(input("Enter thee price of the bill: "))
       print("If you go to a restaurant with", num1 - 1, "other people and the bill is worth", num2, "dollars, then each person will pay", bill_split(num2, num1), "dollars")
         
     elif basic_choice == 'B':
-      num1 = float(input("Enter first number: "))
-      num2 = float(input("Enter second number: "))
+      num1 = float(input("Enter the price of the bill: "))
+      num2 = float(input("Enter the perecentage you want to tip: "))
       print("If you go to a restaurant and the bill is worth", num1, "dollars, and you want to tip,", num2, "%, then the tip will be worth", bill_tip(num1, num2), "dollars")
 
   next_calculation = input("Let's do another calculation? (yes/no): ")
