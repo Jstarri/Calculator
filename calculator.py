@@ -127,62 +127,73 @@ while True:
 
   if style_choice == 'C':
     print("Select operation.")
-    print("A: Area of Square")
-    print("B: Area of Rectangle")
-    print("C: Area of Triangle")
-    print("D: Area of Circle")
-    print("E: Volume of Cube")
-    print("F: Volume of Rectangular Prism")
-    print("G: Volume of Pyramid")
-    print("H: Volume of Sphere")
-    print("I: Point Slope Equation")
+    print("A: 2d Shapes")
+    print("B: 3d Shapes")
 
-    basic_choice = input("Enter choice(A/B/C/D/E/F/G/H/I): ")
+    shape_choice = input("Enter choice(A/B): ")
 
-    if basic_choice == 'A':
-      num1 = float(input("Enter side length: "))
-      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
+    if shape_choice == 'A':
+      print("A: Area of Square")
+      print("B: Area of Rectangle")
+      print("C: Area of Triangle")
+      print("D: Area of Circle")
+      print("E: Point Slope Equation")
+
+      basic_choice_1 = input("Enter choice(A/B/C/D/E): ")
+
+      if basic_choice_1 == 'A':
+        num1 = float(input("Enter side length: "))
+        print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
       
-    elif basic_choice == 'B':
-      num1 = float(input("Enter length: "))
-      num2 = float(input("Enter height: "))
-      print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
+      elif basic_choice_1 == 'B':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
         
-    elif basic_choice == 'C':
-      num1 = float(input("Enter base length: "))
-      num2 = float(input("Enter height: "))
-      print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
+      elif basic_choice_1 == 'C':
+        num1 = float(input("Enter base length: "))
+        num2 = float(input("Enter height: "))
+        print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
         
-    elif basic_choice == 'D':
-      num1 = float(input("Enter radius: "))
-      print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
+      elif basic_choice_1 == 'D':
+        num1 = float(input("Enter radius: "))
+        print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
 
-    if basic_choice == 'E':
-      num1 = float(input("Enter side length: "))
-      print("The volume of a cube with a length of", num3, "inches, a height of", num3, "inches, & a width of", num3, "inches =", cube_volume(num3), "inches")
+      elif basic_choice_1 == 'E':
+        num1 = float(input("Enter value for x1: "))
+        num2 = float(input("Enter value for y1: "))
+        num3 = float(input("Enter value for x2: "))
+        num4 = float(input("Enter value for y2: "))
+        print("The slope of the line between (", num1, ",", num2, ") and (", num3, ",", num4, ") =", point_slope(num1, num2, num3, num4))
+
+    if shape_choice == 'B':
+      print("A: Volume of Cube")
+      print("B: Volume of Rectangular Prism")
+      print("C: Volume of Pyramid")
+      print("D: Volume of Sphere")
+
+      basic_choice_2 = input("Enter choice(A/B/C/D): ")
+
+      if basic_choice_2 == 'A':
+        num1 = float(input("Enter side length: "))
+        print("The volume of a cube with a length of", num3, "inches, a height of", num3, "inches, & a width of", num3, "inches =", cube_volume(num3), "inches")
     
-    if basic_choice == 'F':
-      num1 = float(input("Enter length: "))
-      num2 = float(input("Enter height: "))
-      num3 = float(input("Enter width: "))
-      print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
+      if basic_choice_2 == 'B':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        num3 = float(input("Enter width: "))
+        print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
     
-    if basic_choice == 'G':
-      num1 = float(input("Enter base length: "))
-      num2 = float(input("Enter base width: "))
-      num3 = float(input("Enter height: "))
-      print("The volume of a cube with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
+      if basic_choice_2 == 'C':
+        num1 = float(input("Enter base length: "))
+        num2 = float(input("Enter base width: "))
+        num3 = float(input("Enter height: "))
+        print("The volume of a cube with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
     
-    if basic_choice == 'H':
-      num1 = float(input("Enter radius: "))
-      print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
+      if basic_choice_2 == 'D':
+        num1 = float(input("Enter radius: "))
+        print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
     
-    if basic_choice == 'I':
-      num1 = float(input("Enter value for x1: "))
-      num2 = float(input("Enter value for y1: "))
-      num3 = float(input("Enter value for x2: "))
-      num4 = float(input("Enter value for y2: "))
-      print("The slope of the line between (", num1, ",", num2, ") and (", num3, ",", num4, ") =", point_slope(num1, num2, num3, num4))
 
   if style_choice == 'D':
     print("Select operation.")
