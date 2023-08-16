@@ -141,41 +141,41 @@ while True:
 
     if basic_choice == 'A':
       num1 = float(input("Enter side length: "))
-      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1))
+      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
       
     elif basic_choice == 'B':
       num1 = float(input("Enter length: "))
       num2 = float(input("Enter height: "))
-      print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2))
+      print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
         
     elif basic_choice == 'C':
       num1 = float(input("Enter base length: "))
       num2 = float(input("Enter height: "))
-      print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2))
+      print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
         
     elif basic_choice == 'D':
       num1 = float(input("Enter radius: "))
-      print("The area of a circle with a radius of", num3, "inches =", circle_area(num3))
+      print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
 
     if basic_choice == 'E':
       num1 = float(input("Enter side length: "))
-      print("The volume of a cube with a length of", num3, ", a height of", num3, ", & a width of", num3, "=", cube_volume(num3))
+      print("The volume of a cube with a length of", num3, "inches, a height of", num3, "inches, & a width of", num3, "inches =", cube_volume(num3), "inches")
     
     if basic_choice == 'F':
       num1 = float(input("Enter length: "))
       num2 = float(input("Enter height: "))
       num3 = float(input("Enter width: "))
-      print("The volume of a rectangular prism with a length of", num1, ", a height of", num2, ", & a width of", num3, "=", r_prism_volume(num1, num2, num3))
+      print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
     
     if basic_choice == 'G':
       num1 = float(input("Enter base length: "))
       num2 = float(input("Enter base width: "))
       num3 = float(input("Enter height: "))
-      print("The volume of a cube with a base length of", num1, ", a base width of", num2, ", & a height of", num3, "=", pyramid_volume(num1, num2, num3))
+      print("The volume of a cube with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
     
     if basic_choice == 'H':
       num1 = float(input("Enter radius: "))
-      print("The volume of a sphere with a radius of", num1, "=", sphere_volume(num1))
+      print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
     
     if basic_choice == 'I':
       num1 = float(input("Enter value for x1: "))
