@@ -56,11 +56,14 @@ def bill_split(x, y):
 
 def bill_tip(x, y):
   return x * (y * 0.01)
+
+def point_slope(w, x, y, z):
+  return (z-x)/(y-w)
   
 print("Welcome to AJ's Calculator")
 print("Choose your Calculator Style: ")
 while True:
-  style_choice = input("Enter choice: A - Basic Calculations; B - Exponents, Roots & Logs; C - Areas of Shapes; D - Bill Calculator: ")
+  style_choice = input("Enter choice: A - Basic Calculations; B - Exponents, Roots & Logs; C - Shapes & Slopes; D - Bill Calculator: ")
   if style_choice == 'A':
     print("Select operation.")
     print("A: Add")
@@ -132,8 +135,9 @@ while True:
     print("F: Volume of Rectangular Prism")
     print("G: Volume of Pyramid")
     print("H: Volume of Sphere")
+    print("I: Point Slope Equation")
 
-    basic_choice = input("Enter choice(A/B/C/D/E/F/G/H): ")
+    basic_choice = input("Enter choice(A/B/C/D/E/F/G/H/I): ")
 
     if basic_choice == 'A':
       num1 = float(input("Enter side length: "))
@@ -172,6 +176,13 @@ while True:
     if basic_choice == 'H':
       num1 = float(input("Enter radius: "))
       print("The volume of a sphere with a radius of", num1, "=", sphere_volume(num1))
+    
+    if basic_choice == 'I':
+      num1 = float(input("Enter value for x1: "))
+      num2 = float(input("Enter value for y1: "))
+      num3 = float(input("Enter value for x2: "))
+      num4 = float(input("Enter value for y2: "))
+      print("The slope of the line between (", num1, ",", num2, ") and (", num3, ",", num4, ") =", point_slope(num1, num2, num3, num4))
 
   if style_choice == 'D':
     print("Select operation.")
