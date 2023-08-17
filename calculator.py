@@ -36,6 +36,9 @@ def square_perimeter(x):
 def cube_volume(x):
   return x **3
 
+def cube_s_area(x):
+  return 6(x ** 2)
+
 def rectangle_area(x, y):
   return x * y
 
@@ -44,6 +47,9 @@ def rectangle_perimeter(x, y):
 
 def r_prism_volume(x, y, z):
   return x * y * z
+
+def r_prism_s_area(x, y, z):
+  return 2((y * x) + (z * x) + (z * y))
 
 def triangle_area(x, y):
   return 0.5(x * y)
@@ -59,6 +65,9 @@ def circle_circumference(x):
 
 def sphere_volume(x):
   return (4/3) * 3.14 * (x **3)
+
+def sphere_s_area(x):
+  return (4 * 3.14) * (x ** 2)
 
 def bill_split(x, y):
   return x / y
@@ -193,31 +202,48 @@ while True:
 
     if shape_choice == 'B':
       print("A: Volume of Cube")
-      print("B: Volume of Rectangular Prism")
-      print("C: Volume of Pyramid")
-      print("D: Volume of Sphere")
+      print("B: Surface Area of Cube")
+      print("C: Volume of Rectangular Prism")
+      print("D: Surface Area of Rectangular Prism")
+      print("E: Volume of Pyramid")
+      print("F: Volume of Sphere")
+      print("G: Surface Area of Sphere")
 
-      basic_choice_2 = input("Enter choice(A/B/C/D): ")
+      basic_choice_2 = input("Enter choice(A/B/C/D/E/F/G): ")
 
       if basic_choice_2 == 'A':
         num1 = float(input("Enter side length: "))
-        print("The volume of a cube with a length of", num3, "inches, a height of", num3, "inches, & a width of", num3, "inches =", cube_volume(num3), "inches")
-    
+        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_volume(num1), "inches")
+      
       if basic_choice_2 == 'B':
+        num1 = float(input("Enter side length: "))
+        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_s_area(num1), "inches")
+    
+      if basic_choice_2 == 'C':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
         num3 = float(input("Enter width: "))
         print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
+      
+      if basic_choice_2 == 'D':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        num3 = float(input("Enter width: "))
+        print("The surface area of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_s_area(num1, num2, num3), "inches")
     
-      if basic_choice_2 == 'C':
+      if basic_choice_2 == 'E':
         num1 = float(input("Enter base length: "))
         num2 = float(input("Enter base width: "))
         num3 = float(input("Enter height: "))
-        print("The volume of a cube with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
+        print("The volume of a pyramid with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
     
-      if basic_choice_2 == 'D':
+      if basic_choice_2 == 'F':
         num1 = float(input("Enter radius: "))
         print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
+      
+      if basic_choice_2 == 'G':
+        num1 = float(input("Enter radius: "))
+        print("The surface area of a sphere with a radius of", num1, "inches =", sphere_s_area(num1), "inches")
     
 
   if style_choice == 'D':
