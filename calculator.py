@@ -30,11 +30,17 @@ def base_log(x, y):
 def square_area(x):
   return x ** 2
 
+def square_perimeter(x):
+  return x * 4
+
 def cube_volume(x):
   return x **3
 
 def rectangle_area(x, y):
   return x * y
+
+def rectangle_perimeter(x, y):
+  return (x + y) * 2
 
 def r_prism_volume(x, y, z):
   return x * y * z
@@ -47,6 +53,9 @@ def pyramid_volume(x, y, z):
 
 def circle_area(x):
   return 3.14(x **2)
+
+def circle_circumference(x):
+  return (3.14 * 2) * x
 
 def sphere_volume(x):
   return (4/3) * 3.14 * (x **3)
@@ -134,32 +143,48 @@ while True:
 
     if shape_choice == 'A':
       print("A: Area of Square")
-      print("B: Area of Rectangle")
-      print("C: Area of Triangle")
-      print("D: Area of Circle")
-      print("E: Point Slope Equation")
+      print("B: Perimeter of Square")
+      print("C: Area of Rectangle")
+      print("D: Perimeter of Rectangle")
+      print("E: Area of Triangle")
+      print("F: Area of Circle")
+      print("G: Circumference of Circle")
+      print("H: Point Slope Equation")
 
-      basic_choice_1 = input("Enter choice(A/B/C/D/E): ")
+      basic_choice_1 = input("Enter choice(A/B/C/D/E/F/G/H): ")
 
       if basic_choice_1 == 'A':
         num1 = float(input("Enter side length: "))
         print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
       
       elif basic_choice_1 == 'B':
+        num1 = float(input("Enter side length: "))
+        print("The perimeter of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_perimeter(num1), "inches")
+      
+      elif basic_choice_1 == 'C':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
         print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
+
+      elif basic_choice_1 == 'D':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        print("The perimeter of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_perimeter(num1, num2), "inches")
         
-      elif basic_choice_1 == 'C':
+      elif basic_choice_1 == 'E':
         num1 = float(input("Enter base length: "))
         num2 = float(input("Enter height: "))
         print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
         
-      elif basic_choice_1 == 'D':
+      elif basic_choice_1 == 'F':
         num1 = float(input("Enter radius: "))
         print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
+      
+      elif basic_choice_1 == 'G':
+        num1 = float(input("Enter radius: "))
+        print("The area of a circle with a radius of", num3, "inches =", circle_circumference(num3), "inches")
 
-      elif basic_choice_1 == 'E':
+      elif basic_choice_1 == 'H':
         num1 = float(input("Enter value for x1: "))
         num2 = float(input("Enter value for y1: "))
         num3 = float(input("Enter value for x2: "))
