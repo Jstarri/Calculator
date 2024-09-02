@@ -30,37 +30,58 @@ def base_log(x, y):
 def square_area(x):
   return x ** 2
 
+def square_perimeter(x):
+  return x * 4
+
 def cube_volume(x):
   return x **3
+
+def cube_s_area(x):
+  return 6 * (x ** 2)
 
 def rectangle_area(x, y):
   return x * y
 
+def rectangle_perimeter(x, y):
+  return (x + y) * 2
+
 def r_prism_volume(x, y, z):
   return x * y * z
 
+def r_prism_s_area(x, y, z):
+  return 2 * ((y * x) + (z * x) + (z * y))
+
 def triangle_area(x, y):
-  return 0.5(x * y)
+  return 0.5 * (x * y)
 
 def pyramid_volume(x, y, z):
   return (1/3) * (x * y) * z
 
 def circle_area(x):
-  return 3.14(x **2)
+  return 3.14 * (x **2)
+
+def circle_circumference(x):
+  return (3.14 * 2) * x
 
 def sphere_volume(x):
   return (4/3) * 3.14 * (x **3)
+
+def sphere_s_area(x):
+  return (4 * 3.14) * (x ** 2)
 
 def bill_split(x, y):
   return x / y
 
 def bill_tip(x, y):
   return x * (y * 0.01)
+
+def point_slope(w, x, y, z):
+  return (z-x)/(y-w)
   
 print("Welcome to AJ's Calculator")
 print("Choose your Calculator Style: ")
 while True:
-  style_choice = input("Enter choice: A - Basic Calculations; B - Exponents, Roots & Logs; C - Areas of Shapes; D - Bill Calculator: ")
+  style_choice = input("Enter choice: A - Basic Calculations; B - Exponents, Roots & Logs; C - Shapes & Slopes; D - Bill Calculator: ")
   if style_choice == 'A':
     print("Select operation.")
     print("A: Add")
@@ -124,54 +145,106 @@ while True:
 
   if style_choice == 'C':
     print("Select operation.")
-    print("A: Area of Square")
-    print("B: Area of Rectangle")
-    print("C: Area of Triangle")
-    print("D: Area of Circle")
-    print("E: Volume of Cube")
-    print("F: Volume of Rectangular Prism")
-    print("G: Volume of Pyramid")
-    print("H: Volume of Sphere")
+    print("A: 2d Shapes")
+    print("B: 3d Shapes")
 
-    basic_choice = input("Enter choice(A/B/C/D/E/F/G/H): ")
+    shape_choice = input("Enter choice(A/B): ")
 
-    if basic_choice == 'A':
-      num1 = float(input("Enter side length: "))
-      print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1))
+    if shape_choice == 'A':
+      print("A: Area of Square")
+      print("B: Perimeter of Square")
+      print("C: Area of Rectangle")
+      print("D: Perimeter of Rectangle")
+      print("E: Area of Triangle")
+      print("F: Area of Circle")
+      print("G: Circumference of Circle")
+      print("H: Point Slope Equation")
+
+      basic_choice_1 = input("Enter choice(A/B/C/D/E/F/G/H): ")
+
+      if basic_choice_1 == 'A':
+        num1 = float(input("Enter side length: "))
+        print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
       
-    elif basic_choice == 'B':
-      num1 = float(input("Enter length: "))
-      num2 = float(input("Enter height: "))
-      print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2))
-        
-    elif basic_choice == 'C':
-      num1 = float(input("Enter base length: "))
-      num2 = float(input("Enter height: "))
-      print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2))
-        
-    elif basic_choice == 'D':
-      num1 = float(input("Enter radius: "))
-      print("The area of a circle with a radius of", num3, "inches =", circle_area(num3))
+      elif basic_choice_1 == 'B':
+        num1 = float(input("Enter side length: "))
+        print("The perimeter of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_perimeter(num1), "inches")
+      
+      elif basic_choice_1 == 'C':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
 
-    if basic_choice == 'E':
-      num1 = float(input("Enter side length: "))
-      print("The volume of a cube with a length of", num3, ", a height of", num3, ", & a width of", num3, "=", cube_volume(num3))
+      elif basic_choice_1 == 'D':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        print("The perimeter of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_perimeter(num1, num2), "inches")
+        
+      elif basic_choice_1 == 'E':
+        num1 = float(input("Enter base length: "))
+        num2 = float(input("Enter height: "))
+        print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
+        
+      elif basic_choice_1 == 'F':
+        num1 = float(input("Enter radius: "))
+        print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
+      
+      elif basic_choice_1 == 'G':
+        num1 = float(input("Enter radius: "))
+        print("The area of a circle with a radius of", num3, "inches =", circle_circumference(num3), "inches")
+
+      elif basic_choice_1 == 'H':
+        num1 = float(input("Enter value for x1: "))
+        num2 = float(input("Enter value for y1: "))
+        num3 = float(input("Enter value for x2: "))
+        num4 = float(input("Enter value for y2: "))
+        print("The slope of the line between (", num1, ",", num2, ") and (", num3, ",", num4, ") =", point_slope(num1, num2, num3, num4))
+
+    if shape_choice == 'B':
+      print("A: Volume of Cube")
+      print("B: Surface Area of Cube")
+      print("C: Volume of Rectangular Prism")
+      print("D: Surface Area of Rectangular Prism")
+      print("E: Volume of Pyramid")
+      print("F: Volume of Sphere")
+      print("G: Surface Area of Sphere")
+
+      basic_choice_2 = input("Enter choice(A/B/C/D/E/F/G): ")
+
+      if basic_choice_2 == 'A':
+        num1 = float(input("Enter side length: "))
+        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_volume(num1), "inches")
+      
+      if basic_choice_2 == 'B':
+        num1 = float(input("Enter side length: "))
+        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_s_area(num1), "inches")
     
-    if basic_choice == 'F':
-      num1 = float(input("Enter length: "))
-      num2 = float(input("Enter height: "))
-      num3 = float(input("Enter width: "))
-      print("The volume of a rectangular prism with a length of", num1, ", a height of", num2, ", & a width of", num3, "=", r_prism_volume(num1, num2, num3))
+      if basic_choice_2 == 'C':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        num3 = float(input("Enter width: "))
+        print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
+      
+      if basic_choice_2 == 'D':
+        num1 = float(input("Enter length: "))
+        num2 = float(input("Enter height: "))
+        num3 = float(input("Enter width: "))
+        print("The surface area of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_s_area(num1, num2, num3), "inches")
     
-    if basic_choice == 'G':
-      num1 = float(input("Enter base length: "))
-      num2 = float(input("Enter base width: "))
-      num3 = float(input("Enter height: "))
-      print("The volume of a cube with a base length of", num1, ", a base width of", num2, ", & a height of", num3, "=", pyramid_volume(num1, num2, num3))
+      if basic_choice_2 == 'E':
+        num1 = float(input("Enter base length: "))
+        num2 = float(input("Enter base width: "))
+        num3 = float(input("Enter height: "))
+        print("The volume of a pyramid with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
     
-    if basic_choice == 'H':
-      num1 = float(input("Enter radius: "))
-      print("The volume of a sphere with a radius of", num1, "=", sphere_volume(num1))
+      if basic_choice_2 == 'F':
+        num1 = float(input("Enter radius: "))
+        print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
+      
+      if basic_choice_2 == 'G':
+        num1 = float(input("Enter radius: "))
+        print("The surface area of a sphere with a radius of", num1, "inches =", sphere_s_area(num1), "inches")
+    
 
   if style_choice == 'D':
     print("Select operation.")
@@ -182,12 +255,12 @@ while True:
 
     if basic_choice == 'A':
       num1 = float(input("Enter the number of people: "))
-      num2 = float(input("Enter thee price of the bill: "))
+      num2 = float(input("Enter the price of the bill: "))
       print("If you go to a restaurant with", num1 - 1, "other people and the bill is worth", num2, "dollars, then each person will pay", bill_split(num2, num1), "dollars")
         
     elif basic_choice == 'B':
       num1 = float(input("Enter the price of the bill: "))
-      num2 = float(input("Enter the perecentage you want to tip: "))
+      num2 = float(input("Enter the percentage you want to tip: "))
       print("If you go to a restaurant and the bill is worth", num1, "dollars, and you want to tip,", num2, "%, then the tip will be worth", bill_tip(num1, num2), "dollars")
 
   next_calculation = input("Let's do another calculation? (yes/no): ")
