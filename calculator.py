@@ -37,7 +37,7 @@ def cube_volume(x):
   return x **3
 
 def cube_s_area(x):
-  return 6(x ** 2)
+  return 6 * (x ** 2)
 
 def rectangle_area(x, y):
   return x * y
@@ -49,16 +49,16 @@ def r_prism_volume(x, y, z):
   return x * y * z
 
 def r_prism_s_area(x, y, z):
-  return 2((y * x) + (z * x) + (z * y))
+  return 2 * ((y * x) + (z * x) + (z * y))
 
 def triangle_area(x, y):
-  return 0.5(x * y)
+  return 0.5 * (x * y)
 
 def pyramid_volume(x, y, z):
   return (1/3) * (x * y) * z
 
 def circle_area(x):
-  return 3.14(x **2)
+  return 3.14 * (x **2)
 
 def circle_circumference(x):
   return (3.14 * 2) * x
