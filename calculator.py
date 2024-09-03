@@ -164,34 +164,41 @@ while True:
 
       if basic_choice_1 == 'A':
         num1 = float(input("Enter side length: "))
-        print("The area of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_area(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The area of a square with a length of", num1, unit,", and a height of", num1, unit," =", square_area(num1), unit)
       
       elif basic_choice_1 == 'B':
         num1 = float(input("Enter side length: "))
-        print("The perimeter of a square with a length of", num1, "inches, and a height of", num1, "inches =", square_perimeter(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The perimeter of a square with a length of", num1, unit,", and a height of", num1, unit," =", square_perimeter(num1), unit)
       
       elif basic_choice_1 == 'C':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
-        print("The area of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_area(num1, num2), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The area of a rectangle with a length of", num1, unit,", and a height of", num2, unit," =", rectangle_area(num1, num2), unit)
 
       elif basic_choice_1 == 'D':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
-        print("The perimeter of a rectangle with a length of", num1, "inches, and a height of", num2, "inches =", rectangle_perimeter(num1, num2), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The perimeter of a rectangle with a length of", num1, unit,", and a height of", num2, unit," =", rectangle_perimeter(num1, num2), unit)
         
       elif basic_choice_1 == 'E':
         num1 = float(input("Enter base length: "))
         num2 = float(input("Enter height: "))
-        print("The area of a triangle with a base length of", num1, "inches, and a height of", num2, "inches =", triangle_area(num1, num2), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The area of a triangle with a base length of", num1, unit,", and a height of", num2, unit," =", triangle_area(num1, num2), unit)
         
       elif basic_choice_1 == 'F':
         num1 = float(input("Enter radius: "))
-        print("The area of a circle with a radius of", num3, "inches =", circle_area(num3), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The area of a circle with a radius of", num3, unit," =", circle_area(num3), unit)
       
       elif basic_choice_1 == 'G':
         num1 = float(input("Enter radius: "))
-        print("The area of a circle with a radius of", num3, "inches =", circle_circumference(num3), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The area of a circle with a radius of", num3, unit," =", circle_circumference(num3), unit)
 
       elif basic_choice_1 == 'H':
         num1 = float(input("Enter value for x1: "))
@@ -213,37 +220,44 @@ while True:
 
       if basic_choice_2 == 'A':
         num1 = float(input("Enter side length: "))
-        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_volume(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The volume of a cube with a length of", num1, unit,", a height of", num1, unit,", & a width of", num1, unit," =", cube_volume(num1), unit)
       
       if basic_choice_2 == 'B':
         num1 = float(input("Enter side length: "))
-        print("The volume of a cube with a length of", num1, "inches, a height of", num1, "inches, & a width of", num1, "inches =", cube_s_area(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The volume of a cube with a length of", num1, unit,", a height of", num1, unit,", & a width of", num1, unit," =", cube_s_area(num1), unit)
     
       if basic_choice_2 == 'C':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
         num3 = float(input("Enter width: "))
-        print("The volume of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_volume(num1, num2, num3), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The volume of a rectangular prism with a length of", num1, unit,", a height of", num2, unit,", & a width of", num3, unit," =", r_prism_volume(num1, num2, num3), unit)
       
       if basic_choice_2 == 'D':
         num1 = float(input("Enter length: "))
         num2 = float(input("Enter height: "))
         num3 = float(input("Enter width: "))
-        print("The surface area of a rectangular prism with a length of", num1, "inches, a height of", num2, "inches, & a width of", num3, "inches =", r_prism_s_area(num1, num2, num3), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The surface area of a rectangular prism with a length of", num1, unit,", a height of", num2, unit,", & a width of", num3, unit," =", r_prism_s_area(num1, num2, num3), unit)
     
       if basic_choice_2 == 'E':
         num1 = float(input("Enter base length: "))
         num2 = float(input("Enter base width: "))
         num3 = float(input("Enter height: "))
-        print("The volume of a pyramid with a base length of", num1, "inches, a base width of", num2, "inches, & a height of", num3, "inches =", pyramid_volume(num1, num2, num3), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The volume of a pyramid with a base length of", num1, unit,", a base width of", num2, unit,", & a height of", num3, unit," =", pyramid_volume(num1, num2, num3), unit)
     
       if basic_choice_2 == 'F':
         num1 = float(input("Enter radius: "))
-        print("The volume of a sphere with a radius of", num1, "inches =", sphere_volume(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The volume of a sphere with a radius of", num1, unit," =", sphere_volume(num1), unit)
       
       if basic_choice_2 == 'G':
         num1 = float(input("Enter radius: "))
-        print("The surface area of a sphere with a radius of", num1, "inches =", sphere_s_area(num1), "inches")
+        unit = input("Enter unit of measurement: ")
+        print("The surface area of a sphere with a radius of", num1, unit," =", sphere_s_area(num1), unit)
     
 
   if style_choice == 'D':
@@ -256,12 +270,12 @@ while True:
     if basic_choice == 'A':
       num1 = float(input("Enter the number of people: "))
       num2 = float(input("Enter the price of the bill: "))
-      print("If you go to a restaurant with", num1 - 1, "other people and the bill is worth", num2, "dollars, then each person will pay", bill_split(num2, num1), "dollars")
+      print("If you go to a restaurant with", num1 - 1, "other people and the bill is worth $", num2, ", then each person will pay $", bill_split(num2, num1))
         
     elif basic_choice == 'B':
       num1 = float(input("Enter the price of the bill: "))
       num2 = float(input("Enter the percentage you want to tip: "))
-      print("If you go to a restaurant and the bill is worth", num1, "dollars, and you want to tip,", num2, "%, then the tip will be worth", bill_tip(num1, num2), "dollars")
+      print("If you go to a restaurant and the bill is worth $", num1, ", and you want to tip,", num2, "%, then the tip will be worth $", bill_tip(num1, num2))
 
   next_calculation = input("Let's do another calculation? (yes/no): ")
   if next_calculation == 'yes':
